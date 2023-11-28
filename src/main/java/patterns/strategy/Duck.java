@@ -7,12 +7,16 @@ public abstract class Duck {
     protected FlyBehaviour flyBehaviour;
     protected QuackBehaviour quackBehaviour;
 
+    protected String type;
+
     public void swim() {
         System.out.println("I'm swimming.");
     }
 
     public void display() {
-        System.out.println("I'm a duck.");
+        System.out.println("I'm a " + type + " duck.");
+        this.performFly();
+        this.performQuack();
     }
 
     public void performFly() {

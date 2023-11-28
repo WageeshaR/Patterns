@@ -10,13 +10,7 @@ public class MallardDuck extends Duck {
     public MallardDuck() {
         this.flyBehaviour = new FlyWithWings();
         this.quackBehaviour = new Quack();
-    }
-
-    @Override
-    public void display() {
-        System.out.println("I'm a Mallard duck.");
-        this.performFly();
-        this.performQuack();
+        this.type = "Mallard";
     }
 
     public void setFlyBehaviour(FlyBehaviour flyBehaviour) {
