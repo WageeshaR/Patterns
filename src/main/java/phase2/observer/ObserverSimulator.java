@@ -1,7 +1,5 @@
 package phase2.observer;
 
-import java.beans.PropertyChangeListener;
-
 import phase2.observer.listeners.BBC;
 import phase2.observer.listeners.CNBC;
 import phase2.observer.observable.WeatherReporter;
