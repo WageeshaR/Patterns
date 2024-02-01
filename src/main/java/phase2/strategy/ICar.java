@@ -1,11 +1,22 @@
 package phase2.strategy;
 
-public interface ICar {
-    void drive();
+public abstract class ICar {
+    protected IDriveStyle driveStyle;
+    protected ICarColor carColor;
 
-    void showColor();
+    void drive() {
+        driveStyle.driveInStyle();
+    }
 
-    void setCarColor(ICarColor carColor);
+    void showColor() {
+        carColor.shine();
+    }
 
-    void setDriveStyle(IDriveStyle driveStyle);
+    void setCarColor(ICarColor carColor) {
+        this.carColor = carColor;
+    }
+
+    void setDriveStyle(IDriveStyle driveStyle) {
+        this.driveStyle = driveStyle;
+    }
 }
